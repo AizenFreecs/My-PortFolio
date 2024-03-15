@@ -1,8 +1,10 @@
 import React from 'react'
-
+import ProjectsGrid from '@/components/projects/ProjectsGrid'
 function Projects() {
   return (
-    <div>Projects</div>
+    <div>
+      <ProjectsGrid />
+    </div>
   )
 }
 

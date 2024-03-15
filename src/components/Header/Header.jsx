@@ -12,7 +12,7 @@ function Header() {
   return (
     <header className="w-full">
       <nav className="h-10vh flex flex-col lg:flex-row justify-between z-50  lg:py-5 px-20 py-4">
-        <div className="flex justify-between">
+        <div className="flex justify-between text-xl items-center">
           <span>LOGO</span>
           <button
             onClick={toggleMenu}
@@ -21,7 +21,7 @@ function Header() {
             {menuOpen ? "Close" : "Open"}
           </button>
         </div>
-        <div className="lg:hidden">
+        {menuOpen && <div className={`lg:hidden`}>
           <ul className="flex flex-col items-center">
             {navItemsData.navItems.map((item) => (
               <li
@@ -36,14 +36,15 @@ function Header() {
               themeToggle
             </div>
           </ul>
-        </div>
+        </div>}
+        
         <div>
           <ul className="hidden lg:flex lg:flex-row justify-center  items-center gap-6">
             {navItemsData.navItems.map((item) => (
               <li
                 key={item.name}
                 onClick={() => navigate(item.path)}
-                className="hover:cursor-pointer hover:underline hover:text-red-600 "
+                className="hover:cursor-pointer hover:underline hover:text-red-600 text-lg decoration-1 "
               >
                 {item.name}
               </li>
