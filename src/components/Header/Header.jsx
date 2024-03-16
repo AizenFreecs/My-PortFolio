@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import navItemsData from "./navItems.json";
 import { useNavigate } from "react-router-dom";
+import { Button } from "../ui/button";
+import { MdDoubleArrow } from "react-icons/md";
 
 function Header() {
   const navigate = useNavigate();
@@ -52,7 +54,7 @@ function Header() {
           </ul>
         </div>
         <div className="hidden lg:block">
-          themeToggle
+          <Button className="bg-blue-800 text-white hover:scale-110 " >Contact Me </Button>
         </div>
       </nav>
     </header>

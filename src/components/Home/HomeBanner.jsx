@@ -2,6 +2,7 @@ import React from "react";
 import { easeIn, motion } from "framer-motion";
 import { Button } from "../ui/button";
 import { GiPaperArrow } from "react-icons/gi";
+import bgImg from '../../assets/images/bgHome.jpg'
 
 function HomeBanner() {
   return (
@@ -10,8 +11,9 @@ function HomeBanner() {
       animate={{ opacity: 1 }}
       transition={{ ease: easeIn, duration: 0.9, delay: 0.2 }}
       className="flex flex-col w-full p-2 md:flex-row items-center md:min-h-[38rem] mb-10 md:mb-2 "
+      style={{backgroundImage:bgImg}}
     >
-      <div className="w-full md:w-1/2 md:pl-10 md:text-left text-center mt-4 md:mt-14  md:ml-10">
+      <div className="w-full md:w-1/2 md:pl-10 md:text-left text-center mt-4 md:mt-6  md:ml-10">
         <motion.h1
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
@@ -53,7 +55,7 @@ function HomeBanner() {
       <div className="w-full relative flex md:w-1/2 mt-20 md:mt-0 justify-center items-center transform scale-50 md:scale-90 ">
         <img
           className=" w-56 h-56 rounded-full border-4 border-slate-400 drop-shadow-xl"
-          src="public\assets\herobannerimage.jpeg"
+          src="public\assets\myphoto.jpg"
           alt="Image"
         />
 
