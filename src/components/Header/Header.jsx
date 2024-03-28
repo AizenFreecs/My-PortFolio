@@ -54,7 +54,7 @@ function Header() {
           </ul>
         </div>
         <div className="hidden lg:block">
-          <Button className="bg-blue-800 text-white hover:scale-110 " >Contact Me </Button>
+          <Button onClick={()=>navigate("/contact")} className="hover:bg-blue-800 text-white hover:scale-110 " >Contact Me </Button>
         </div>
       </nav>
     </header>

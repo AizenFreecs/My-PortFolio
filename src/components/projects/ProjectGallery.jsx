@@ -30,7 +30,7 @@ function ProjectGallery() {
         ref={ref}
         initial={{ opacity: 0 }}
         animate={controls}
-        transition={{ ease: easeIn, duration: 0.9, delay: 0.2 }}
+        transition={{ ease: easeIn, duration: 0.4, delay: 0.2 }}
         className="flex flex-col md:flex-row justify-between items-center ml-2 gap-4"
       >
         {projects.slice(0, 3).map((project) => (

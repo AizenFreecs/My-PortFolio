@@ -27,7 +27,7 @@ function TechSection() {
         ref={ref}
         initial={{ opacity: 0 }}
         animate={controls}
-        transition={{ ease: easeIn, duration: 0.6, delay: 0.2 }}
+        transition={{ ease: easeIn, duration: 0.4, delay: 0.2 }}
         className="flex flex-col md:flex-row scale-70 md:scale-100 justify-between items-center"
       >
         <div>

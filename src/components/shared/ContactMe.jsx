@@ -1,12 +1,15 @@
 import React from "react";
 import { useForm } from "react-hook-form";
+import { firestore } from "@/firebaseAuth/fbAuth";
+import { addDoc, collection, setDoc, doc } from "@firebase/firestore";
 import { Input } from "../ui/input";
 import { Label } from "../ui/label";
 import { Button } from "../ui/button";
 import { Textarea } from "../ui/textarea";
+import { useNavigate } from "react-router-dom";
 
 function ContactMe() {
-  const { register, handleSubmit, control } = useForm({
+  const { register, handleSubmit, control, reset } = useForm({
     defaultValues: {
       name: "",
       companyName: "",
@@ -14,12 +17,30 @@ function ContactMe() {
       message: "",
     },
   });
-  const handleFormSubmit = (data) => {
+  
+  const navigate = useNavigate()
+  const handleFormSubmit = async (data) => {
     console.log(data);
+    try {
+      await setDoc(doc(firestore, "hireMessages", data.email), data).then(
+        () => {
+          alert("Message Delivered Successfully!");
+          reset({
+            name: "",
+            companyName: "",
+            email: "",
+            message: "",
+          });
+          navigate("/")
+        }
+      );
+    } catch (error) {
+      console.log(error);
+    }
   };
   return (
     <section className="flex justify-center items-center">
-      <div className="p-4 md:w-80 bg-gray-50 rounded-md drop-shadow-xl">
+      <div className="p-4 md:w-80 bg-blue-200 rounded-md drop-shadow-xl">
         <h1>Looking forward to your message :</h1>
         <form
           onSubmit={handleSubmit(handleFormSubmit)}
@@ -33,7 +54,7 @@ function ContactMe() {
               type="name"
               id="name"
               placeholder="Please state your name"
-              className="mt-2 bg-opacity-0"
+              className="mt-2 bg-opacity-100"
               {...register("name", { required: true })}
             />
           </div>
