@@ -10,8 +10,11 @@ function HomeBanner() {
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ ease: easeIn, duration: 0.9, delay: 0.2 }}
-      className="flex flex-col w-full p-2 md:flex-row items-center md:min-h-[38rem] mb-10 md:mb-2 "
-      style={{backgroundImage:bgImg}}
+      className="flex flex-col w-full p-2 md:flex-row items-center md:min-h-[38rem] mb-10 pb-10 md:pb-0 md:mb-2 "
+      style={{
+        backgroundImage: "url('https://images.pexels.com/photos/593158/pexels-photo-593158.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1')",
+        backgroundSize: "cover",
+      }}
     >
       <div className="w-full md:w-1/2 md:pl-10 md:text-left text-center mt-4 md:mt-6  md:ml-10">
         <motion.h1
@@ -22,7 +25,7 @@ function HomeBanner() {
             duration: 0.9,
             delay: 0.6,
           }}
-          className="text-2xl lg:text-4xl text-ternary-dark mt-14"
+          className="text-2xl lg:text-4xl text-white mt-2"
         >
           Hi, I am Sahil Thakur
         </motion.h1>
@@ -34,7 +37,7 @@ function HomeBanner() {
             duration: 0.9,
             delay: 1.2,
           }}
-          className="mt-4 md:text-2xl text-l text-gray-500"
+          className="mt-4 md:text-2xl text-md text-gray-200"
         >
           A software developer with a love for building stuff
         </motion.p>
@@ -59,7 +62,7 @@ function HomeBanner() {
           alt="Image"
         />
 
-        <div className="hw-inner flex justify-between  items-center absolute border border-gray-800 rounded-full animate-spin-slow  ">
+        <div className="hw-inner flex justify-between  items-center absolute border border-gray-200 rounded-full animate-spin-slow  ">
           <div className="bg-white p-1 rounded-full drop-shadow-xl h-10 w-10 transform -translate-x-5 ">
             <img
               className="h-9 w-9 object-center animate-rotate-image"
@@ -76,7 +79,7 @@ function HomeBanner() {
           </div>
         </div>
 
-        <div className="hw-middle flex justify-between  items-center absolute border border-gray-800 rounded-full animate-spin-slow  ">
+        <div className="hw-middle flex justify-between  items-center absolute border border-gray-100 rounded-full animate-spin-slow  ">
           <div className="flex justify-between items-center h-full w-full">
             <div className="bg-white p-1 rounded-full drop-shadow-xl h-10 w-10 transform translate-x-12 translate-y-36">
               <img
@@ -112,7 +115,7 @@ function HomeBanner() {
           </div>
         </div>
 
-        <div className="hw-outer flex justify-between items-center absolute border border-gray-800 rounded-full animate-spin-slow">
+        <div className="hw-outer flex justify-between items-center absolute border border-white rounded-full animate-spin-slow">
           <div className="flex justify-between items-center h-full w-full">
             <div className="bg-white p-1 rounded-full drop-shadow-xl h-10 w-10 transform translate-x-[17rem] translate-y-[16rem]">
               <img

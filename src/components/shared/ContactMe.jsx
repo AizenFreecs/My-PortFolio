@@ -7,8 +7,76 @@ import { Label } from "../ui/label";
 import { Button } from "../ui/button";
 import { Textarea } from "../ui/textarea";
 import { useNavigate } from "react-router-dom";
+import {
+  Drawer,
+  DrawerClose,
+  DrawerContent,
+  DrawerDescription,
+  DrawerFooter,
+  DrawerHeader,
+  DrawerTitle,
+  DrawerTrigger,
+} from "@/components/ui/drawer";
+import { cn } from "@/lib/utils";
+import { useMediaQuery } from "@react-hook/media-query";
+import {
+  Dialog,
+  DialogContent,
+  DialogDescription,
+  DialogHeader,
+  DialogTitle,
+  DialogTrigger,
+} from "@/components/ui/dialog";
+
 
 function ContactMe() {
+  const [open, setOpen] = React.useState(false);
+  const isDesktop = useMediaQuery("(min-width: 768px)");
+  if (isDesktop) {
+    return (
+      <div>
+        <Dialog open={open} onOpenChange={setOpen}>
+          <DialogTrigger asChild>
+            <Button className=" bg-black hover:bg-blue-800 text-white hover:scale-110">Contact Me</Button>
+          </DialogTrigger>
+          <DialogContent className="sm:max-w-[425px]">
+            <DialogHeader>
+              <DialogTitle>Contact Me</DialogTitle>
+              <DialogDescription>
+              Reach Out and Connect with Me!
+              </DialogDescription>
+                    </DialogHeader>
+                    <ContactMeForm/>
+          </DialogContent>
+        </Dialog>
+      </div>
+    );
+  }
+
+  return (
+    <Drawer open={open} onOpenChange={setOpen}>
+      <DrawerTrigger asChild>
+        <Button variant="outline">Edit Profile</Button>
+      </DrawerTrigger>
+      <DrawerContent>
+        <DrawerHeader className="text-left">
+          <DrawerTitle>Edit profile</DrawerTitle>
+          <DrawerDescription>
+            Make changes to your profile here. Click save when you're done.
+          </DrawerDescription>
+        </DrawerHeader>
+        
+        <DrawerFooter className="pt-2">
+          <DrawerClose asChild>
+            <Button variant="outline">Cancel</Button>
+          </DrawerClose>
+        </DrawerFooter>
+      </DrawerContent>
+    </Drawer>
+  );
+}
+
+function ContactMeForm(params) {
   const { register, handleSubmit, control, reset } = useForm({
     defaultValues: {
       name: "",
@@ -40,8 +108,7 @@ function ContactMe() {
   };
   return (
     <section className="flex justify-center items-center">
-      <div className="p-4 md:w-80 bg-blue-200 rounded-md drop-shadow-xl">
-        <h1>Looking forward to your message :</h1>
+      <div className="md:w-96 rounded-md drop-shadow-xl">
         <form
           onSubmit={handleSubmit(handleFormSubmit)}
           className="py-4 w-full flex flex-col justify-center items-center gap-4"

@@ -21,14 +21,14 @@ function TechSection() {
     }
   }, [controls, inView]);
   return (
-    <section className="w-full p-2 md:mt-4 px-16 gap-2 justify-between text-center text-xl">
+    <section className="w-full py-2 md:mt-4  gap-2 justify-between text-center text-xl">
       <h1 className="py-8 text-4xl font-mono">My Areas of Interest</h1>
       <motion.div
         ref={ref}
         initial={{ opacity: 0 }}
         animate={controls}
         transition={{ ease: easeIn, duration: 0.4, delay: 0.2 }}
-        className="flex flex-col md:flex-row scale-70 md:scale-100 justify-between items-center"
+        className="flex flex-col px-14 md:flex-row scale-70 md:scale-100 justify-between items-center"
       >
         <div>
           <img
@@ -53,8 +53,13 @@ function TechSection() {
         </div>
       </motion.div>
 
-      <h1 className="py-4 text-4xl font-mono">My Tech Stack</h1>
-      <div className="flex flex-col items-center justify-between">
+      
+      <div className="mt-10 flex flex-col items-center justify-between pb-10"
+      style={{
+        backgroundImage: "url('https://images.pexels.com/photos/5706220/pexels-photo-5706220.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1')",
+        backgroundSize: "cover",
+        }}>
+        <h1 className="py-4 text-4xl font-mono">My Tech Stack</h1>
       <h1 className="py-8 text-2xl font-mono">Coding Languages</h1>
         <div className="overflow-x-auto flex space-x-10">
           {codingLanguages.map((tech) => (

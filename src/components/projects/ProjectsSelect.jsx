@@ -13,7 +13,7 @@ function ProjectsSelect({ setSelectProject }) {
   return (
     <select
       onChange={(e) => dispatch(setSelectProject(e.target.value))}
-      className="px-4 py-2 md:px-6  bg-slate-100 rounded-lg shadow-lg text-sm  md:text-lg "
+      className="px-4 py-2 md:px-6 hover:cursor-pointer  bg-slate-100 rounded-lg shadow-lg text-sm  md:text-lg "
     >
       <option value={""} className="text-sm sm:text-md cursor-pointer">
         All Projects

@@ -55,7 +55,7 @@ function ProjectsGrid() {
               aria-label="Name"
             />
           </div>
-          <ProjectsSelect setSelectProject={setSelectProject} />
+          <ProjectsSelect  setSelectProject={setSelectProject} />
         </div>
       </div>
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 mr-3 mt-6 sm:gap-10 ">
