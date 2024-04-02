@@ -18,6 +18,7 @@ module.exports = {
     },
     extend: {
       colors: {
+        'nav-color': '#666e79',
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",

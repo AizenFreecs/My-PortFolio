@@ -54,9 +54,9 @@ function TechSection() {
       </motion.div>
 
       
-      <div className="mt-10 flex flex-col items-center justify-between pb-10"
+      <div className="mt-10 flex flex-col items-center justify-between pb-10 "
       style={{
-        backgroundImage: "url('https://images.pexels.com/photos/5706220/pexels-photo-5706220.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1')",
+        backgroundImage: "url('https://images.pexels.com/photos/773953/pexels-photo-773953.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1')",
         backgroundSize: "cover",
         }}>
         <h1 className="py-4 text-4xl font-mono">My Tech Stack</h1>

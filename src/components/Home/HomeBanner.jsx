@@ -2,7 +2,7 @@ import React from "react";
 import { easeIn, motion } from "framer-motion";
 import { Button } from "../ui/button";
 import { GiPaperArrow } from "react-icons/gi";
-import bgImg from '../../assets/images/bgHome.jpg'
+
 
 function HomeBanner() {
   return (
@@ -10,12 +10,26 @@ function HomeBanner() {
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ ease: easeIn, duration: 0.9, delay: 0.2 }}
-      className="flex flex-col w-full p-2 md:flex-row items-center md:min-h-[38rem] mb-10 pb-10 md:pb-0 md:mb-2 "
-      style={{
+      className="flex flex-col w-full p-2 md:flex-row items-center md:min-h-[38rem]  mb-10 pb-10 md:pb-0 md:mb-2 "
+      /* style={{
         backgroundImage: "url('https://images.pexels.com/photos/593158/pexels-photo-593158.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1')",
         backgroundSize: "cover",
-      }}
+      }} */
     >
+       <div className="area">
+        <ul className="circles">
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+        </ul>
+      </div>
       <div className="w-full md:w-1/2 md:pl-10 md:text-left text-center mt-4 md:mt-6  md:ml-10">
         <motion.h1
           initial={{ opacity: 0 }}
@@ -25,7 +39,7 @@ function HomeBanner() {
             duration: 0.9,
             delay: 0.6,
           }}
-          className="text-2xl lg:text-4xl text-white mt-2"
+          className="text-2xl lg:text-5xl text-black mt-2"
         >
           Hi, I am Sahil Thakur
         </motion.h1>
@@ -37,9 +51,20 @@ function HomeBanner() {
             duration: 0.9,
             delay: 1.2,
           }}
-          className="mt-4 md:text-2xl text-md text-gray-200"
-        >
-          A software developer with a love for building stuff
+          className="mt-2 md:text-xl text-md text-black"
+        > But you can me Aizen, <br />
+          </motion.p>
+        <motion.p
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{
+            ease: "easeInOut",
+            duration: 0.9,
+            delay: 1.2,
+          }}
+          className="mt-4 md:text-2xl text-md text-gray-600"
+        > 
+          I am a software developer with interest in Web Development and Machine Learning and love for building new stuff.
         </motion.p>
         <motion.div
           initial={{ opacity: 0 }}
@@ -62,7 +87,7 @@ function HomeBanner() {
           alt="Image"
         />
 
-        <div className="hw-inner flex justify-between  items-center absolute border border-gray-200 rounded-full animate-spin-slow  ">
+        <div className="hw-inner flex justify-between  items-center absolute border border-black rounded-full animate-spin-slow  ">
           <div className="bg-white p-1 rounded-full drop-shadow-xl h-10 w-10 transform -translate-x-5 ">
             <img
               className="h-9 w-9 object-center animate-rotate-image"
@@ -79,7 +104,7 @@ function HomeBanner() {
           </div>
         </div>
 
-        <div className="hw-middle flex justify-between  items-center absolute border border-gray-100 rounded-full animate-spin-slow  ">
+        <div className="hw-middle flex justify-between  items-center absolute border border-black rounded-full animate-spin-slow  ">
           <div className="flex justify-between items-center h-full w-full">
             <div className="bg-white p-1 rounded-full drop-shadow-xl h-10 w-10 transform translate-x-12 translate-y-36">
               <img
@@ -115,7 +140,7 @@ function HomeBanner() {
           </div>
         </div>
 
-        <div className="hw-outer flex justify-between items-center absolute border border-white rounded-full animate-spin-slow">
+        <div className="hw-outer flex justify-between items-center absolute border border-black rounded-full animate-spin-slow">
           <div className="flex justify-between items-center h-full w-full">
             <div className="bg-white p-1 rounded-full drop-shadow-xl h-10 w-10 transform translate-x-[17rem] translate-y-[16rem]">
               <img

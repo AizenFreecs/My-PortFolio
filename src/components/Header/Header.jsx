@@ -1,9 +1,10 @@
 import React, { useState } from "react";
 import navItemsData from "./navItems.json";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
 import { Button } from "../ui/button";
 import { MdDoubleArrow } from "react-icons/md";
 import ContactMe from "../shared/ContactMe";
+import logoImg from "../../assets/images/myLogo.png";
 
 function Header() {
   const navigate = useNavigate();
@@ -13,10 +14,20 @@ function Header() {
     setMenuOpen(!menuOpen);
   };
   return (
-    <header className="w-full">
-      <nav className="h-10vh flex flex-col lg:flex-row justify-between z-50 lg:py-5 px-20 py-4">
+    <header className="w-full  bg-transparent ">
+      <nav className="h-10vh flex flex-col lg:flex-row justify-between z-50 lg:py-4 px-20 py-4">
         <div className="flex justify-between text-xl items-center">
-          <span>LOGO</span>
+          <div className="h-10">
+            <Link to={"/"}>
+              <div className="flex ">
+                <img
+                  src={logoImg}
+                  className=" h-12 drop-shadow-lg"
+                  alt="App Icon"
+                />
+              </div>
+            </Link>
+          </div>
           <button
             onClick={toggleMenu}
             className="focus:outline-none focus:ring-0 lg:hidden"
@@ -41,7 +52,7 @@ function Header() {
           </div>
         )}
 
-        <div>
+        <div className="pt-1">
           <ul className="hidden lg:flex lg:flex-row justify-center  items-center gap-6">
             {navItemsData.navItems.map((item) => (
               <li
@@ -54,7 +65,7 @@ function Header() {
             ))}
           </ul>
         </div>
-        <div className="hidden lg:block">
+        <div className="hidden lg:block pt-1">
           <ContactMe />
         </div>
       </nav>
