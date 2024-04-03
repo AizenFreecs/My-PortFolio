@@ -14,7 +14,7 @@ function Header() {
     setMenuOpen(!menuOpen);
   };
   return (
-    <header className="w-full  bg-transparent ">
+    <header className="w-full  bg-transparent  ">
       <nav className="h-10vh flex flex-col lg:flex-row justify-between z-50 lg:py-4 px-20 py-4">
         <div className="flex justify-between text-xl items-center">
           <div className="h-10">
@@ -58,7 +58,7 @@ function Header() {
               <li
                 key={item.name}
                 onClick={() => navigate(item.path)}
-                className="hover:cursor-pointer hover:underline hover:text-red-600 text-lg decoration-1 "
+                className="hover:cursor-pointer hover:underline hover:text-red-600 text-2xl font-cedarville decoration-1 "
               >
                 {item.name}
               </li>

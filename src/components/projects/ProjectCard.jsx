@@ -27,11 +27,11 @@ function ProjectCard({
     <motion.section
       key={id}
       initial={{ opacity: 0 }}
-      animate={{ opacity: 1, delay: 1 }}
+      animate={{ opacity: 1 }}
       transition={{
         ease: "easeInOut",
         duration: 0.7,
-        delay: 0.15,
+        
       }}
       className={`w-full rounded-xl shadow-xl cursor-pointer m-2 hover:shadow-2xl max-h-[27rem] hover:max-h-[32rem] overflow-hidden`}
       onMouseEnter={() => setIsHovered(true)}

@@ -37,11 +37,11 @@ function ContactMe() {
       <div>
         <Dialog open={open} onOpenChange={setOpen}>
           <DialogTrigger asChild>
-            <Button className=" bg-black hover:bg-blue-800 text-white hover:scale-110">Contact Me</Button>
+            <Button className=" bg-black hover:bg-blue-800 text-white hover:scale-110 font-marker">Contact Me</Button>
           </DialogTrigger>
           <DialogContent className="sm:max-w-[425px]">
             <DialogHeader>
-              <DialogTitle>Contact Me</DialogTitle>
+              <DialogTitle >Contact Me</DialogTitle>
               <DialogDescription>
               Reach Out and Connect with Me!
               </DialogDescription>

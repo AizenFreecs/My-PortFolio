@@ -3,7 +3,9 @@ import ProjectsGrid from '@/components/projects/ProjectsGrid'
 function Projects() {
   return (
     <div>
+      
       <ProjectsGrid />
+      
     </div>
   )
 }

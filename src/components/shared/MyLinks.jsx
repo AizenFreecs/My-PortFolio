@@ -1,17 +1,37 @@
 import React from "react";
+import { Card } from "../ui/card";
+import {
+  Dialog,
+  DialogContent,
+  DialogDescription,
+  DialogHeader,
+  DialogTitle,
+  DialogTrigger,
+} from "@/components/ui/dialog";
+import { Label } from "../ui/label";
+import { Button } from "../ui/button";
+import { GiPaperArrow } from "react-icons/gi";
 
-function Footer() {
+function MyLinks() {
+  const [open, setOpen] = React.useState(false);
   return (
-    <footer className="relative w-full bottom-0 shadow-lg  pt-8 pb-6">
-      <div className="w-full flex flex-col items-center justify-center  ">
-        <div className="w-full flex flex-col items-center  px-4">
-          <h4 className="text-3xl font-marker fonat-semibold text-blueGray-700">
-            Wanna know more about me ?
-          </h4>
-          <h5 className="text-2xl mt-0 mb-2 font-cedarville text-blueGray-600">
-            Find me on any of these platforms...
-          </h5>
-          <div className="mt-4 lg:mb-0 mb-6">
+    <div>
+      <Dialog open={open} onOpenChange={setOpen}>
+        <DialogTrigger asChild>
+        <Button className="mt-4 font-cedarville ">
+            Connect <GiPaperArrow className="ml-2" />
+          </Button>
+        </DialogTrigger>
+        <DialogContent className="sm:max-w-[425px]">
+          <DialogHeader>
+            <DialogTitle className="font-marker text-center text-xl">
+              Hi
+            </DialogTitle>
+            <DialogDescription className="font-cedarville text-center text-md">
+              Reach Out and Find me on any of these Platforms
+            </DialogDescription>
+          </DialogHeader>
+          <div className=" lg:mb-0 mb-6 text-center">
             <a
               href="https://www.linkedin.com/in/aizenfreecs/"
               target="_blank"
@@ -61,30 +81,10 @@ function Footer() {
               </button>
             </a>
           </div>
-              </div>
-              <div className="mt-6 text-sm text-gray-500 font-semibold py-1">
-                Copyright © <span id="get-current-year">2024</span>
-                <a
-                  href=""
-                  className="text-blueGray-500 hover:text-gray-800"
-                  target="_blank"
-                >
-                  {" "}
-                  MyPortFolio{" "}
-                </a>{" "}
-                by
-                <a
-                  href="https://github.com/AizenFreecs"
-                  className="text-blueGray-500 hover:text-gray-800"
-                >
-                  {" "}
-                  Sahil Thakur (Aizen)
-                </a>
-                .
-              </div>
-      </div>
-    </footer>
+        </DialogContent>
+      </Dialog>
+    </div>
   );
 }
 
-export default Footer;
+export default MyLinks;

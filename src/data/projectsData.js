@@ -3,6 +3,7 @@ import odImage from '../assets/images/objectdetection.png'
 import chessImg from '../assets/images/chess.png'
 import todoImg from '../assets/images/todo.png'
 import ddosImg from '../assets/images/ddos.jpeg'
+import myPF from '../assets/images/myPortfolio.png'
 export const projectsData = [
 	{
 		id: 1,
@@ -24,6 +25,15 @@ export const projectsData = [
 	},
 	{
 		id: 3,
+		title: 'My PortFolio',
+		category: 'Web Development',
+		img: myPF,
+		liveLink:"",
+		github: "https://github.com/AizenFreecs/My-PortFolio",
+		description:"My Portfolio website made with React Js and tailwind CSS along with the use of custom and ShadCN components."
+	},
+	{
+		id: 4,
 		title: 'Chess Game from Scratch',
 		category: 'Other',
 		img: chessImg,
@@ -32,22 +42,13 @@ export const projectsData = [
 		description:"A chess engine made from scratch using python and pygame with animations and sound and a computer opponent based on min max algorithm."
 	},
 	{
-		id: 4,
+		id: 5,
 		title: 'Todo WebApp',
 		category: 'Web Application',
 		img: todoImg,
 		liveLink: "",
 		github: "https://github.com/AizenFreecs/Todos_With_Redux",
 		description:"A Todo app made with React using React Redux for State Management"
-	},
-	{
-		id: 5,
-		title: 'Notes App',
-		category: 'Mobile Application',
-		img: "MobileImage1",
-		liveLink: "",
-		github: "https://github.com/AizenFreecs/NotesApp",
-		description:"A notes app project made with android studio and makes use of firebase real time database for storage with user registration and authentication."
 	},
 	{
 		id: 6,
@@ -57,5 +58,14 @@ export const projectsData = [
 		liveLink: "",
 		github: "https://github.com/AizenFreecs/DDoS-attack-Detection-using-ML",
 		description:"A ML project where I have applied different feature selection algorithms on a progressive DDoS attack dataset to train ML models using the different selected Features."
+	},
+	{
+		id: 7,
+		title: 'Notes App',
+		category: 'Mobile Application',
+		img: "MobileImage1",
+		liveLink: "",
+		github: "https://github.com/AizenFreecs/NotesApp",
+		description:"A notes app project made with android studio and makes use of firebase real time database for storage with user registration and authentication."
 	},
 ];

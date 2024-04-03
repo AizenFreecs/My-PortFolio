@@ -32,13 +32,14 @@ function ProjectsGrid() {
 
   return (
     <section className="w-full p-2 mt-5 scale-90">
+      
       <div className="text-center">
         {" "}
         <h1 className=" font-mono text-4xl text-gray-600">MY PROJECTS</h1>
       </div>
-      <div className="w-full flex pt-3 justify-between shadow-xl item-center px-4 border-b border-primary-light dark:border-secondary-dark pb-3 gap-3">
+      <div className="w-full flex pt-3 justify-between  item-center px-4  border-primary-light dark:border-secondary-dark pb-3 gap-3">
         <div className="w-full flex justify-between items-center">
-          <div className="flex ">
+          <div className="flex border-b border-primary-light outline-1 ">
             <span className=" hidden sm:block bg-primary-light dark:bg-ternary-dark md:p-2.5 shadow-sm rounded-xl cursor-pointer ">
               <FiSearch className="text-ternary-dark dark:text-ternary-light w-5 h-5"></FiSearch>
             </span>

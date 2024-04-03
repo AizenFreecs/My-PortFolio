@@ -1,8 +1,11 @@
+import MyLinks from '@/components/shared/MyLinks'
 import React from 'react'
-import ContactMe from '@/components/shared/ContactMe'
+
 function Test() {
   return (
-    <div><ContactMe/></div>
+    <div>
+      <MyLinks/>
+    </div>
   )
 }
 

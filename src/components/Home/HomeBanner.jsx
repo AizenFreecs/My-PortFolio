@@ -2,6 +2,7 @@ import React from "react";
 import { easeIn, motion } from "framer-motion";
 import { Button } from "../ui/button";
 import { GiPaperArrow } from "react-icons/gi";
+import MyLinks from "../shared/MyLinks";
 
 
 function HomeBanner() {
@@ -39,7 +40,7 @@ function HomeBanner() {
             duration: 0.9,
             delay: 0.6,
           }}
-          className="text-2xl lg:text-5xl text-black mt-2"
+          className="text-2xl lg:text-5xl font-marker text-black mt-2"
         >
           Hi, I am Sahil Thakur
         </motion.h1>
@@ -51,7 +52,7 @@ function HomeBanner() {
             duration: 0.9,
             delay: 1.2,
           }}
-          className="mt-2 md:text-xl text-md text-black"
+          className="mt-2 md:text-xl text-md font-marker text-black"
         > But you can me Aizen, <br />
           </motion.p>
         <motion.p
@@ -62,7 +63,7 @@ function HomeBanner() {
             duration: 0.9,
             delay: 1.2,
           }}
-          className="mt-4 md:text-2xl text-md text-gray-600"
+          className="mt-4 md:text-2xl text-md font-cedarville text-gray-600"
         > 
           I am a software developer with interest in Web Development and Machine Learning and love for building new stuff.
         </motion.p>
@@ -75,15 +76,13 @@ function HomeBanner() {
             delay: 2.1,
           }}
         >
-          <Button className="mt-4">
-            Connect <GiPaperArrow className="ml-2" />
-          </Button>
+          <MyLinks/>
         </motion.div>
       </div>
-      <div className="w-full relative flex md:w-1/2 mt-20 md:mt-0 justify-center items-center transform scale-50 md:scale-90 ">
+      <div className="w-full z-40 relative flex md:w-1/2 mt-20 md:mt-0 justify-center items-center transform scale-50 md:scale-90 ">
         <img
           className=" w-56 h-56 rounded-full border-4 border-slate-400 drop-shadow-xl"
-          src="public\assets\myphoto.jpg"
+          src="assets\myphoto.jpg"
           alt="Image"
         />
 
@@ -91,14 +90,14 @@ function HomeBanner() {
           <div className="bg-white p-1 rounded-full drop-shadow-xl h-10 w-10 transform -translate-x-5 ">
             <img
               className="h-9 w-9 object-center animate-rotate-image"
-              src="public\assets\pythonIcon.png"
+              src="assets\pythonIcon.png"
               alt="Python"
             />
           </div>
           <div className=" p-1 drop-shadow-xl h-11 w-11 transform translate-x-5">
             <img
               className="h-10 w-10 object-contain animate-rotate-image"
-              src="public\assets\jsIcon.png"
+              src="assets\jsIcon.png"
               alt="Python"
             />
           </div>

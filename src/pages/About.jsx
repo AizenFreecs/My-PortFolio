@@ -63,8 +63,8 @@ function About() {
       </Card>
       <div className="md:w-3/4 p-4 mt-2">
         <div className="text-center ">
-          <h1 className="text-4xl">About Me</h1>
-          <p className=" text-justify text-lg px-4 mt-4">
+          <h1 className="text-4xl font-marker">About Me</h1>
+          <p className=" text-justify text-2xl px-4 mt-4 font-cedarville">
             Greetings, I'm Sahil Thakur – a digital dreamer born amidst the
             majestic peaks of Kullu, Himachal Pradesh. Let me paint you a
             picture: by day, I'm your friendly neighborhood software developer,

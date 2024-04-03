@@ -17,6 +17,10 @@ module.exports = {
       },
     },
     extend: {
+      fontFamily: {
+        cedarville: ['"Cedarville Cursive"'],
+        marker:[' "Permanent Marker"']
+      },
       colors: {
         'nav-color': '#666e79',
         border: "hsl(var(--border))",
