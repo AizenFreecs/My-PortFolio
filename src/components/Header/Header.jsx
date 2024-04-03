@@ -5,6 +5,8 @@ import { Button } from "../ui/button";
 import { MdDoubleArrow } from "react-icons/md";
 import ContactMe from "../shared/ContactMe";
 import logoImg from "../../assets/images/myLogo.png";
+import { IoMenu } from "react-icons/io5";
+import { IoMdClose } from "react-icons/io";
 
 function Header() {
   const navigate = useNavigate();
@@ -32,22 +34,24 @@ function Header() {
             onClick={toggleMenu}
             className="focus:outline-none focus:ring-0 lg:hidden"
           >
-            {menuOpen ? "Close" : "Open"}
+            {menuOpen ? <IoMdClose /> : <IoMenu />}
           </button>
         </div>
         {menuOpen && (
           <div className={`lg:hidden`}>
-            <ul className="flex flex-col items-center">
+            <ul className="flex flex-col items-center mt-8 gap-2">
               {navItemsData.navItems.map((item) => (
                 <li
                   key={item.name}
-                  onClick={() => navigate(item.path)}
-                  className="hover:cursor-pointer hover:underline hover:text-red-600 "
+                  onClick={() => {
+                    navigate(item.path);
+                    toggleMenu();
+                  }}
+                  className="hover:cursor-pointer hover:underline text-2xl hover:text-red-600 font-cedarville gap-4"
                 >
                   {item.name}
                 </li>
               ))}
-              <div className="lg:hidden">themeToggle</div>
             </ul>
           </div>
         )}

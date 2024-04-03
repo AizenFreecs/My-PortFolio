@@ -5,7 +5,7 @@ function Footer() {
     <footer className="relative w-full bottom-0 shadow-lg  pt-8 pb-6">
       <div className="w-full flex flex-col items-center justify-center  ">
         <div className="w-full flex flex-col items-center  px-4">
-          <h4 className="text-3xl font-marker fonat-semibold text-blueGray-700">
+          <h4 className="text-3xl font-marker fonat-semibold text-blueGray-700 text-center">
             Wanna know more about me ?
           </h4>
           <h5 className="text-2xl mt-0 mb-2 font-cedarville text-blueGray-600">

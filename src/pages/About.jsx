@@ -28,7 +28,7 @@ const education = [
 function About() {
   return (
     <section className="flex flex-col md:flex-row">
-      <Card className="md:w-1/4 md:ml-10 p-4 mt-2 mx-4 text-center shadow-2xl">
+      <Card className="md:w-1/4 md:ml-10 p-4 mt-2 mx-4 text-center shadow-2xl scale-90 md:scale-100">
       <CardHeader>
         <CardTitle className="font-marker">Hi</CardTitle>
         <CardDescription className="font-cedarville">I am Sahil but you can call me Aizen</CardDescription>

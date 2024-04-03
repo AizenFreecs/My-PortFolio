@@ -31,11 +31,10 @@ function ProjectsGrid() {
   });
 
   return (
-    <section className="w-full p-2 mt-5 scale-90">
-      
+    <section className="w-full p-2  scale-90 -mt-40 md:-mt-10">
       <div className="text-center">
         {" "}
-        <h1 className="text-4xl text-gray-900 font-marker">MY PROJECTS</h1>
+        <h1 className="text-4xl text-gray-900 font-marker mb-8 md:mb-0">MY PROJECTS</h1>
       </div>
       <div className="w-full flex pt-3 justify-between  item-center px-4  border-primary-light dark:border-secondary-dark pb-3 gap-3">
         <div className="w-full flex justify-between items-center">
