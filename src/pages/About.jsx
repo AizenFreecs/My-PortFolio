@@ -30,18 +30,18 @@ function About() {
     <section className="flex flex-col md:flex-row">
       <Card className="md:w-1/4 md:ml-10 p-4 mt-2 mx-4 text-center shadow-2xl">
       <CardHeader>
-        <CardTitle>Hi</CardTitle>
-        <CardDescription>I am Sahil but you can call me Aizen</CardDescription>
+        <CardTitle className="font-marker">Hi</CardTitle>
+        <CardDescription className="font-cedarville">I am Sahil but you can call me Aizen</CardDescription>
         </CardHeader>
         <CardContent>
         <div className="">
           <img
             className="h-[20rem] w-full rounded-full object-fill"
-            src="public\assets\myImage.jpeg"
+            src="assets\myImage.jpeg"
           />
         </div>
           <div className="mt-4">
-            <Label className="text-xl">My Education</Label>
+            <Label className="text-xl font-marker">My Education</Label>
           {education.map((item, index) => (
             <div
               key={index}
@@ -49,10 +49,10 @@ function About() {
             >
               <span className="flex h-2 w-2 translate-y-1 rounded-full bg-sky-500" />
               <div className="space-y-1">
-                <p className="text-sm font-medium leading-none">
+                <p className="text-sm font-medium leading-none font-marker">
                   {item.title}
                 </p>
-                <p className="text-sm text-muted-foreground">
+                <p className="text-sm text-muted-foreground font-cedarville">
                   {item.description}
                 </p>
               </div>
@@ -64,7 +64,7 @@ function About() {
       <div className="md:w-3/4 p-4 mt-2">
         <div className="text-center ">
           <h1 className="text-4xl font-marker">About Me</h1>
-          <p className=" text-justify text-2xl px-4 mt-4 font-cedarville">
+          <p className=" text-justify text-2xl px-4 mt-4 font-cedarville text-gray-500">
             Greetings, I'm Sahil Thakur – a digital dreamer born amidst the
             majestic peaks of Kullu, Himachal Pradesh. Let me paint you a
             picture: by day, I'm your friendly neighborhood software developer,
