@@ -28,7 +28,6 @@ import {
   DialogTrigger,
 } from "@/components/ui/dialog";
 
-
 function ContactMe() {
   const [open, setOpen] = React.useState(false);
   const isDesktop = useMediaQuery("(min-width: 768px)");
@@ -37,16 +36,18 @@ function ContactMe() {
       <div>
         <Dialog open={open} onOpenChange={setOpen}>
           <DialogTrigger asChild>
-            <Button className=" bg-black hover:bg-blue-800 text-white hover:scale-110 font-marker">Contact Me</Button>
+            <Button className=" bg-black hover:bg-blue-800 text-white hover:scale-110 font-marker">
+              Contact Me
+            </Button>
           </DialogTrigger>
           <DialogContent className="sm:max-w-[425px]">
             <DialogHeader>
-              <DialogTitle >Contact Me</DialogTitle>
+              <DialogTitle>Contact Me</DialogTitle>
               <DialogDescription>
-              Reach Out and Connect with Me!
+                Reach Out and Connect with Me!
               </DialogDescription>
-                    </DialogHeader>
-                    <ContactMeForm/>
+            </DialogHeader>
+            <ContactMeForm />
           </DialogContent>
         </Dialog>
       </div>
@@ -65,7 +66,7 @@ function ContactMe() {
             Make changes to your profile here. Click save when you're done.
           </DrawerDescription>
         </DrawerHeader>
-        
+
         <DrawerFooter className="pt-2">
           <DrawerClose asChild>
             <Button variant="outline">Cancel</Button>
@@ -85,8 +86,8 @@ function ContactMeForm(params) {
       message: "",
     },
   });
-  
-  const navigate = useNavigate()
+
+  const navigate = useNavigate();
   const handleFormSubmit = async (data) => {
     console.log(data);
     try {
@@ -99,7 +100,7 @@ function ContactMeForm(params) {
             email: "",
             message: "",
           });
-          navigate("/")
+          navigate("/");
         }
       );
     } catch (error) {

@@ -4,6 +4,7 @@ import chessImg from '../assets/images/chess.png'
 import todoImg from '../assets/images/todo.png'
 import ddosImg from '../assets/images/ddos.jpeg'
 import myPF from '../assets/images/myPortfolio.png'
+
 export const projectsData = [
 	{
 		id: 1,
@@ -25,12 +26,12 @@ export const projectsData = [
 	},
 	{
 		id: 3,
-		title: 'My PortFolio',
+		title: 'Freecs Chat',
 		category: 'Web Development',
-		img: myPF,
-		liveLink:"",
-		github: "https://github.com/AizenFreecs/My-PortFolio",
-		description:"My Portfolio website made with React Js and tailwind CSS along with the use of custom and ShadCN components."
+		img: "",
+		liveLink:"https://freecs-chat.vercel.app/",
+		github: "https://github.com/AizenFreecs/Full-Stack-Chat-App",
+		description:"A FullStack social chat application where you can make friends and chat with them in real time within single or group chats"
 	},
 	{
 		id: 4,
@@ -61,6 +62,15 @@ export const projectsData = [
 	},
 	{
 		id: 7,
+		title: 'My PortFolio',
+		category: 'Web Development',
+		img: myPF,
+		liveLink:"",
+		github: "https://github.com/AizenFreecs/My-PortFolio",
+		description:"My Portfolio website made with React Js and tailwind CSS along with the use of custom and ShadCN components."
+	},
+	{
+		id: 8,
 		title: 'Notes App',
 		category: 'Mobile Application',
 		img: "MobileImage1",

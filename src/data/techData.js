@@ -51,7 +51,7 @@ const mlData = [
     {
         id: 4,
         name: "PyTorch",
-        icon:"assets/pyTorchIcon.png"
+        icon:"assets/pytorchIcon.png"
     }
 ]
 

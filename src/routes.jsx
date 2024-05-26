@@ -1,6 +1,8 @@
+import React, { Suspense } from 'react';
 import { createBrowserRouter } from "react-router-dom";
-import App from './App.jsx'
-import {Home, Resume, About, Contact, Projects, Test} from './pages/index.js'
+import App from './App.jsx';
+import Loading from './components/shared/Loaders.jsx';
+import { Home, Resume, About, Contact, Projects, Test } from './pages/index.js';
 
 const router = createBrowserRouter([
   {
@@ -9,30 +11,54 @@ const router = createBrowserRouter([
     children: [
       {
         path: "/",
-        element: <Home />,
+        element: (
+          <Suspense fallback={<Loading />}>
+            <Home />
+          </Suspense>
+        ),
       },
       {
         path: "/about",
-        element: <About />,
+        element: (
+          <Suspense fallback={<Loading />}>
+            <About />
+          </Suspense>
+        ),
       },
       {
         path: "/projects",
-        element: <Projects />,
+        element: (
+          <Suspense fallback={<Loading />}>
+            <Projects />
+          </Suspense>
+        ),
       },
       {
         path: "/resume",
-        element: <Resume />,
+        element: (
+          <Suspense fallback={<Loading />}>
+            <Resume />
+          </Suspense>
+        ),
       },
       {
         path: "/contact",
-        element: <Contact />,
+        element: (
+          <Suspense fallback={<Loading />}>
+            <Contact />
+          </Suspense>
+        ),
       },
       {
         path: "/test",
-        element: <Test />,
+        element: (
+          <Suspense fallback={<Loading />}>
+            <Test />
+          </Suspense>
+        ),
       },
     ],
   },
 ]);
 
-export default router
+export default router;

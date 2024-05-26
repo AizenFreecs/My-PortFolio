@@ -1,9 +1,10 @@
-import About from "./About";
-import Home from "./Home";
-import Projects from './Projects'
-import Resume from './Resume'
-import Contact from './Contact'
-import Test from './Test'
+import React from 'react';
+const Home = React.lazy(() => import('./Home'));
+const About = React.lazy(() => import('./About'));
+const Projects = React.lazy(() => import('./Projects'));
+const Resume = React.lazy(() => import('./Resume'));
+const Contact = React.lazy(() => import('./Contact'));
+const Test = React.lazy(() => import('./Test'));
 
 export {
     About,
