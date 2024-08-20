@@ -40,7 +40,7 @@ function HomeBanner() {
             duration: 0.9,
             delay: 0.6,
           }}
-          className="text-2xl lg:text-5xl font-marker text-black mt-2"
+          className="text-2xl lg:text-5xl font-bungee text-black mt-2"
         >
           Hi, I am Sahil Thakur
         </motion.h1>
@@ -52,7 +52,7 @@ function HomeBanner() {
             duration: 0.9,
             delay: 1.2,
           }}
-          className="mt-2 md:text-xl text-md font-marker text-black"
+          className="mt-2 md:text-3xl text-md font-fira text-black"
         > But you can me Aizen, <br />
           </motion.p>
         <motion.p
@@ -63,9 +63,9 @@ function HomeBanner() {
             duration: 0.9,
             delay: 1.2,
           }}
-          className="mt-4 md:text-2xl text-md font-cedarville text-gray-600"
+          className="mt-4 md:text-2xl text-md font-fira text-gray-600"
         > 
-          I am a software developer with interest in Web Development and Machine Learning and love for building new stuff.
+          I am a software developer with interest in Web Development, Machine Learning and love for building new stuff.
         </motion.p>
         <motion.div
           initial={{ opacity: 0 }}

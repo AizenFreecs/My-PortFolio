@@ -22,11 +22,7 @@ function Header() {
           <div className="h-10">
             <Link to={"/"}>
               <div className="flex ">
-                <img
-                  src={logoImg}
-                  className=" h-12 drop-shadow-lg"
-                  alt="App Icon"
-                />
+                <h1 className="text-2xl text-[#c90900] font-marker">Sahil's Portfolio</h1>
               </div>
             </Link>
           </div>
@@ -47,7 +43,7 @@ function Header() {
                     navigate(item.path);
                     toggleMenu();
                   }}
-                  className="hover:cursor-pointer hover:underline text-2xl hover:text-red-600 font-cedarville gap-4"
+                  className="hover:cursor-pointer hover:underline text-2xl hover:text-red-600 font-fira gap-4"
                 >
                   {item.name}
                 </li>
@@ -62,7 +58,7 @@ function Header() {
               <li
                 key={item.name}
                 onClick={() => navigate(item.path)}
-                className="hover:cursor-pointer hover:underline hover:text-red-600 text-2xl font-cedarville decoration-1 "
+                className="hover:cursor-pointer hover:underline hover:text-red-600 text-2xl font-fira decoration-1 "
               >
                 {item.name}
               </li>

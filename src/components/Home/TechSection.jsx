@@ -7,6 +7,7 @@ import { easeIn, motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import { webData,mlData,codingLanguages,toolsData } from "@/data/techData";
 import TechItem from "./TechItem";
+import TechStack from "./TechStack";
 
 
 function TechSection() {
@@ -22,7 +23,11 @@ function TechSection() {
   }, [controls, inView]);
   return (
     <section className="w-full py-2 md:mt-4  gap-2 justify-between text-center text-xl">
-      <h1 className="py-8 text-4xl font-marker">My Areas of Interest</h1>
+      
+      
+      <TechStack/>
+
+      <h1 className="py-8 mt-4 text-4xl font-fira font-bold ">My Areas of Interest</h1>
       <motion.div
         ref={ref}
         initial={{ opacity: 0 }}
@@ -54,38 +59,6 @@ function TechSection() {
         </div>
       </motion.div>
 
-      
-      <div className="mt-10 flex flex-col items-center justify-between pb-10 "
-      style={{
-        backgroundImage: "url('https://images.pexels.com/photos/773953/pexels-photo-773953.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1')",
-        backgroundSize: "cover",
-        }}>
-        <h1 className="py-4 text-4xl font-marker">My Tech Stack</h1>
-      <h1 className="py-8 text-2xl font-cedarville">Coding Languages</h1>
-        <div className="overflow-x-auto flex space-x-10">
-          {codingLanguages.map((tech) => (
-            <TechItem key={tech.id} name={tech.name} icon={tech.icon} />
-          ))}
-        </div>
-        <h1 className="py-8 text-2xl font-cedarville">Web Development</h1>
-        <div className="overflow-x-auto flex justify-center  flex-wrap gap-5">
-          {webData.map((item) => (
-            <TechItem key={item.id} name={item.name} icon={item.icon} />
-          ))}
-        </div>
-        <h1 className="py-8 text-2xl font-cedarville">Machine Learning</h1>
-        <div className="overflow-x-auto flex justify-center  flex-wrap gap-5">
-          {mlData.map((item) => (
-            <TechItem key={item.id} name={item.name} icon={item.icon} />
-          ))}
-        </div>
-        <h1 className="py-8 text-2xl font-cedarville">Tools</h1>
-        <div className="overflow-x-auto flex justify-center  flex-wrap gap-5">
-          {toolsData.map((item) => (
-            <TechItem key={item.id} name={item.name} icon={item.icon} />
-          ))}
-        </div>
-      </div>
       
     </section>
   );

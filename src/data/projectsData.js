@@ -4,6 +4,7 @@ import chessImg from '../assets/images/chess.png'
 import todoImg from '../assets/images/todo.png'
 import ddosImg from '../assets/images/ddos.jpeg'
 import myPF from '../assets/images/myPortfolio.png'
+import freecsImg from '../../public/assets/freecs.jpg'
 
 export const projectsData = [
 	{
@@ -28,7 +29,7 @@ export const projectsData = [
 		id: 3,
 		title: 'Freecs Chat',
 		category: 'Web Development',
-		img: "",
+		img: freecsImg,
 		liveLink:"https://freecs-chat.vercel.app/",
 		github: "https://github.com/AizenFreecs/Full-Stack-Chat-App",
 		description:"A FullStack social chat application where you can make friends and chat with them in real time within single or group chats"

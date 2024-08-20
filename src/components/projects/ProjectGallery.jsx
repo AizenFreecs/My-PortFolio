@@ -22,9 +22,9 @@ function ProjectGallery() {
 
   return (
     <div className="w-full flex flex-col justify-center text-center px-4 py-2 items-center">
-      <h1 className="pt-8 pb-4 mt-6 text-4xl font-marker">
+      <h1 className="pt-8 pb-4 mt-6 text-4xl font-patua">
         {" "}
-        Some of my Projects{" "}
+        My Projects{" "}
       </h1>
       <motion.div
         ref={ref}
@@ -48,7 +48,7 @@ function ProjectGallery() {
         ))}
       </motion.div>
       <Button className="mt-4" onClick={() => navigate("/projects")}>
-        More projects
+        See More
       </Button>
     </div>
   );

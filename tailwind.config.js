@@ -19,7 +19,10 @@ module.exports = {
     extend: {
       fontFamily: {
         cedarville: ['"Cedarville Cursive"'],
-        marker:[' "Permanent Marker"']
+        marker: [' "Permanent Marker"'],
+        bungee: ['"Bungee Tint"'],
+        fira: ['"Josefin Sans"'],
+        patua: ['"Patua One"'],
       },
       colors: {
         'nav-color': '#666e79',

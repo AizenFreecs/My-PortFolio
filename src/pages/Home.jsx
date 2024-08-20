@@ -6,8 +6,9 @@ function Home() {
   return (
     <div>
       <HomeBanner />
-      <TechSection />
       <ProjectGallery />
+      <TechSection />
+      
       
     </div>
   )
